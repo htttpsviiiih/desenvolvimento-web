@@ -1,0 +1,25 @@
+
+body{
+    margin: none;
+    padding: 0%;
+    background-image: url(/sertanejo/imagens/sla.jpg    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+header ul li{
+    display: inline-block;
+    margin-left: 100px;
+    font-size: 15px;
+    
+}
+main{
+   
+}
+header a{
+    text-decoration: none;
+    color: azure;
+}
+
+
+
