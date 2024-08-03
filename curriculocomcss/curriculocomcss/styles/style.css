@@ -1,4 +1,4 @@
-ody {
+body {
     width: 60%;
     margin: 0 auto;
     padding: 2% 0;
@@ -25,40 +25,36 @@ main h2 {
 main p {
     font-family: "Truculenta";
 }
-section.info-extra{
+
+section.secao-competencias {
     margin-top: 0px;
     padding-bottom: 5px;
     border-top: solid 1px black;
 }
 
-section.johnny-img{
+section.formacao {
     margin-top: 0px;
     padding-bottom: 5px;
     border-top: solid 1px black;
 }
 
-section.table {
+section.experiencia {
     margin-top: 0px;
     padding-bottom: 5px;
     border-top: solid 1px black;
-    font-family: "Truculenta";
 }
-
 
 section.Contato {
     margin-top: 0px;
     padding-bottom: 5px;
     border-top: solid 1px black;
 }
-footer {
-    background-color: #496989;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-  }
- footer p{
-    text-decoration: none;
- }
+
+section.perfil {
+    margin-top: 0px;
+    padding-bottom: 5px;
+    border-top: solid 1px black;
+}
 
 .botao {
     display: inline-block;
@@ -69,6 +65,11 @@ footer {
     border: none;
     border-radius: 5px;
 }
+
+a {
+    color: black;
+}
+
 .botao a {
     color: black;
     text-decoration: none;
@@ -76,5 +77,4 @@ footer {
 
 .botao:hover {
     background-color: #7093b6;
-    cursor: pointer;
-}   
+    cursor: pointer;}
