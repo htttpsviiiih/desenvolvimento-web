@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Clique aqui</button>
+    <p class="zero">
+
+    </p>
+    
+    <input type="text">
+    <p class="um"></p>
+
+
+    <script>
+
+        let numeroCliques = 0;
+
+        const botao = document.querySelector('button');
+        const textos = document.querySelectorAll('p');
+
+        const input = document.querySelector('input');
+
+        // botao.onclick = function (){ //função anonima
+        //     console.log("Clicou");
+        //     numeroCliques++;
+        //     texto.innerText = "O botão foi clicado: " + numeroCliques + " vezes";
+
+        // }
+
+        botao.addEventListener('click', () => {
+            console.log("Clicou");
+            numeroCliques++;
+            textos[0].innerText = "O botão foi clicado: " + numeroCliques + " vezes";
+        })  
+
+        input.addEventListener('keypress', () => {
+            let textoDigitado = input.value;
+
+            if (textoDigitado == "Calabresa") {
+                textos[1].innerText = "Um sabor clássico";
+            }else if(textoDigitado == "Frango com catupíry"){
+                textos[1].innerText = "Um sabor que divide opiniões";
+            }else{
+                textos[1].innerText = "Seu gosto é peculiar ";
+
+            }
+   
+
+        })
+        document.addEventListener("click", ()=>{
+            let bgColor = 'rgb(' + Math.random()*225 + ',' + Math.random()*255 + ',' + Math.random() * 255 + ')';
+            
+            document.body.style.backgroundColor = bgColor;
+        })
+    </script>
+</body>
+
+</html>
