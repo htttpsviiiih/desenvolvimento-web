@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <style>
+        .erro {
+            color: tomato;
+            display: none;
+        }
+
+        .grupo {
+            padding: 10px;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input.invalido {
+            border: solid 2px tomato;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <div class="container">
+            <h1>Formulario</h1>
+            <div class="grupo">
+                <input type="text" placeholder="informe seu nome">
+                <span class="erro">o nome deve ter pelo menos três caracteres</span>
+            </div>
+
+            <div class="grupo">
+                <input type="text" placeholder="inform seu e-mail">
+                <span class="erro">o email precisa ser válido</span>
+            </div>
+
+            <div class="grupo">
+                <input type="password" placeholder="informe sua senha">
+                <span class="erro">a senha precisa ter 8 caracteres </span>
+                <a class="verSenha">&#128065</a>
+            </div>
+
+            <div class="grupo">
+                <input type="password" placeholder="confirme sua senha">
+                <span class="erro">a confirmação não corresponde à senha</span>
+            </div>
+
+            <div class="grupo">
+                <input type="submit" value="enviar">
+            </div>
+        </div>
+    </form>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const erros = document.querySelectorAll('.erro')
+
+        function validaNome() {
+            if (inputs[0].value.length <= 3) {
+                console.log("digitou")
+                erros[0].style.display = 'block'
+                inputs[0].classList.add('invalido')
+            } else {
+                erros[0].style.display = 'none'
+                inputs[0].classList.remove('invalido')
+            }
+        }
+
+        inputs[0].addEventListener('input', validaNome);
+        function validaEmail() {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(inputs[1].value)) {
+                console.log("digitou")
+                erros[1].style.display = 'block'
+                inputs[1].classList.add('invalido');
+            } else {
+                erros[1].style.display = 'none'
+                inputs[1].classList.remove('invalido');
+            }
+        }
+        inputs[1].addEventListener('input', validaEmail);
+        function validaSenha() {
+            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+            if (!senhaRegex.test(inputs[2].value)) {
+                erros[2].style.display = 'block'
+                inputs[2].classList.add('invalido');
+            } else {
+                erros[2].style.display = 'none'
+                inputs[2].classList.remove('invalido');
+            }
+        }
+        inputs[2].addEventListener('input', validaSenha);
+
+        function confirmaSenha() {
+            if (inputs[3].value != inputs[2].value) {
+                erros[3].style.display = 'block'
+                inputs[3].classList.add('invalido');
+            }
+            else {
+                erros[3].style.display = 'none'
+                inputs[3].classList.remove('invalido');
+            }
+        }
+
+        inputs[3].addEventListener('input', validaSenha);
+
+        document.querySelector('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            validaEmail();
+            validaNome();
+            validaSenha();
+            confirmaSenha();
+        })
+        document.querySelector('.verSenha').addEventListener('click', () => {
+            const tipoAtual = inputs[2].getAttribute('type');
+
+            const tipo = tipoAtual === 'password' ? 'text' : 'password';        
+            inputs[2].setAttribute('type', tipo)
+
+        })
+    </script>
+
+</body>
+
+</html>

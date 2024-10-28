@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tiny5&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Chakra Petch", sans-serif;
+    font-style: normal;
+    font-size: large;
+    
+}
+body{
+    background-image: url('https://wallpapers.com/images/high/4k-earth-sunrise-from-space-gqyfe1jdm1ld1wuz.webp'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+ 
+}
+body img{
+    margin-top: 60px;
+    width: 500px;
+    margin-left: 40px;
+}
+.caixa{
+    width: 500px;
+    height: 50px;
+    background-color: aliceblue;
+    color:rgb(93, 24, 121);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

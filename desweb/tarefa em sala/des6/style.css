@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: large;
+    font-family: "Alegreya", serif;
+    
+   
+}
+
+body{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 900px;
+    height: 400px;
+    background-color: rgb(185, 145, 95);
+    margin-top: 10%;
+    border-radius: 20px;
+    border: solid 2px brown;
+}
+.container button{
+    border-radius: 20px;
+    padding: 20px;
+    width: 240px;
+    background-color: rgb(133, 70, 45);
+    border: none;
+    font-size: large;
+}
+.container button:hover{
+    background-color: rgb(133, 80, 59);
+}
+.container h1{
+    font-size: xx-large;
+    color: floralwhite;
+}
+.caixa{
+    width: 400px;
+    background-color: aliceblue;
+    padding: 20px;
+    border: solid 2px brown;
+    
+}
+.caixa p{
+    margin-left: 10%;
+}
