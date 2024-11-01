@@ -172,9 +172,14 @@
 /*COMPETECIAS*/
 .conteudo-competencias{
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 40px;
+    margin: 50px;
+
+}
+.title{
+    margin: 58px;
 }
 .card-cptFilho{
     flex-basis: 32%;
@@ -209,12 +214,19 @@
 .logo img{
     width: 250px
 }
+.fim-pg-conteudo{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  
+}
 .secao1{
     display: flex;
     justify-content: left;
     flex-direction: column;
     gap: 10px;
     margin-left: 50px;
+    width: 400px;
 }
 .menu-sec1{
     display: flex;
@@ -222,13 +234,12 @@
     list-style: none;
     flex-direction: row;
 }
-.menu-sec1 ul{
-     text-decoration: none;
-}
+
 .menu-sec1 li a i {
+    text-decoration: none;
     margin: 10px;
     font-size: 24px;
-    color: #007bff;
+    color: #71b3fa;
 }
 .endereco{
     display: flex;
@@ -252,12 +263,93 @@
     border: solid 1px #3ba7dd;
     width: 500px;
 }
-.botao:hover{
-    background-image: linear-gradient(180deg,#003c6a 100% );
+.botao button:hover{
+    background-image: linear-gradient(180deg,#003c6a 100%);
     color: #3ba7dd;
+    cursor: pointer;
 
 }
+
 .botao{
     margin-top: 20px;
     margin-left: 20px;
 }
+
+/* sec 2 */
+
+.secao2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+
+
+}
+.lista{
+    margin-left: 120px;
+    align-items: center;
+    text-align: right;
+    opacity: 40%;
+}
+.secao2 .item{
+    text-decoration: none;
+    list-style: none;
+    align-items: flex-end;
+    color: #ffffff;
+    line-height: 24px;
+    font-size: large;
+}
+.caixa-botao{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+}
+.caixa-botao button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    padding: 15px;
+    border-radius: 30px;
+    width: 180px;
+    text-align: center;
+    font-size: medium;
+    border: none;
+    background-color: hsl(0, 0%, 97%);
+    color: #15304d;   
+    border: solid 3px #083a6e;
+    transition: all 0.20s ease-in;
+    
+}
+.caixa-botao button:hover{
+    padding-right: 30px;
+    border-radius: 40px;
+    width: 200px;
+    color: #4d9aec;
+    border: solid 3px #4d9aec;
+
+    background-color: #091033;
+    transition: all 0.40s ease-out;
+}
+.caixa-botao img {
+    width: 20px;
+    color: #00315E;
+}
+/* footer */
+
+.conteudo-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.textinho p{
+    color: #162557;
+    font-size: small;
+}
+/* #091033 */
